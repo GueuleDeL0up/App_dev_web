@@ -1,10 +1,9 @@
-<?php require_once '/app/Views/header.php'; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <title>KeepMyPet - Login</title>
-<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="../../public/assets/css/main.css">
 </head>
 <body id="connexion">
 
@@ -22,7 +21,7 @@
 
     <!-- Partie logo -->
     <div class="left">
-        <img src="assets/KeepMyPet_Logo.png" alt="Logo KeepMyPet">
+        <img src="../../public/assets/images/KeepMyPet_Logo.png" alt="Logo KeepMyPet">
     </div>
 
     <!-- Partie formulaire -->
@@ -46,4 +45,3 @@
 
 </body>
 </html>
-<?php require_once '/app/Views/footer.php'; ?>
