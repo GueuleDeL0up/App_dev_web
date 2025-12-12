@@ -1,9 +1,17 @@
-.logo {
-  width: 600px;
-  height: 600px;
-  position: relative;
-  top: 25px;
-  left: 125px;
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px 10px;
+}
+
+.logo-container img {
+  width: 500px;
+}
+
+.login-container {
+  display: flex;
 }
 
 /* Base pour toutes les formes */
@@ -23,171 +31,95 @@
 .triangle {
   width: 0px;
   height: 0px;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  border-bottom: 50px solid #58b1c9;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 60px solid #58b1c9;
 }
 
 /* --- RONDS (20) --- */
 #c1 {
-  top: 90%;
-  left: 90%;
+  top: 50%;
+  left: 5%;
 }
 #c2 {
-  top: 120px;
-  left: 150px;
+  top: 3%;
+  left: 30%;
 }
 #c3 {
-  top: 200px;
-  left: 250px;
+  top: 5%;
+  left: 60%;
 }
 #c4 {
-  top: 280px;
-  left: 350px;
+  top: 12%;
+  left: 45%;
 }
 #c5 {
-  top: 350px;
-  left: 450px;
+  top: 15%;
+  left: 4%;
 }
 #c6 {
-  top: 420px;
-  left: 550px;
+  top: 80%;
+  left: 24%;
 }
 #c7 {
-  top: 50px;
-  left: 650px;
+  top: 86%;
+  left: 54%;
 }
 #c8 {
-  top: 120px;
-  left: 750px;
+  top: 38%;
+  left: 46%;
 }
 #c9 {
-  top: 200px;
-  left: 850px;
+  top: 3%;
+  left: 87%;
 }
 #c10 {
-  top: 280px;
-  left: 950px;
-}
-#c11 {
-  top: 350px;
-  left: 1050px;
-}
-#c12 {
-  top: 420px;
-  left: 1150px;
-}
-#c13 {
-  top: 50px;
-  left: 1250px;
-}
-#c14 {
-  top: 120px;
-  left: 1350px;
-}
-#c15 {
-  top: 200px;
-  left: 100px;
-}
-#c16 {
-  top: 280px;
-  left: 200px;
-}
-#c17 {
-  top: 350px;
-  left: 300px;
-}
-#c18 {
-  top: 420px;
-  left: 400px;
-}
-#c19 {
-  top: 50px;
-  left: 500px;
-}
-#c20 {
-  top: 120px;
-  left: 600px;
+  top: 84%;
+  left: 88%;
 }
 
 /* --- TRIANGLES (20) --- */
 #t1 {
-  top: 70px;
-  left: 100px;
+  top: 2%;
+  left: 15%;
 }
 #t2 {
-  top: 150px;
-  left: 200px;
+  top: 25%;
+  left: 55%;
 }
 #t3 {
-  top: 230px;
-  left: 300px;
+  top: 27%;
+  left: 11%;
 }
 #t4 {
-  top: 310px;
-  left: 400px;
+  top: 80%;
+  left: 8%;
 }
 #t5 {
-  top: 390px;
-  left: 500px;
+  top: 60%;
+  left: 52%;
 }
 #t6 {
-  top: 470px;
-  left: 600px;
+  top: 74%;
+  left: 40%;
 }
 #t7 {
-  top: 70px;
-  left: 700px;
+  top: 3%;
+  left: 45%;
 }
 #t8 {
-  top: 150px;
-  left: 800px;
+  top: 80%;
+  left: 70%;
 }
 #t9 {
-  top: 230px;
-  left: 900px;
+  top: 12%;
+  left: 75%;
 }
 #t10 {
-  top: 310px;
-  left: 1000px;
+  top: 3%;
+  left: 45%;
 }
-#t11 {
-  top: 390px;
-  left: 1100px;
-}
-#t12 {
-  top: 470px;
-  left: 1200px;
-}
-#t13 {
-  top: 70px;
-  left: 1300px;
-}
-#t14 {
-  top: 150px;
-  left: 50px;
-}
-#t15 {
-  top: 230px;
-  left: 150px;
-}
-#t16 {
-  top: 310px;
-  left: 250px;
-}
-#t17 {
-  top: 390px;
-  left: 350px;
-}
-#t18 {
-  top: 470px;
-  left: 450px;
-}
-#t19 {
-  top: 70px;
-  left: 550px;
-}
-#t20 {
-  top: 150px;
-  left: 650px;
+
+* {
+  border: 1px solid red;
 }
