@@ -1,4 +1,4 @@
-body {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,7 +139,7 @@ body {
 
 /* Desktop (> 1024px) */
 @media (min-width: 1025px) {
-  body {
+  .container {
     display: flex;
     flex-direction: row; /* logo à gauche, login à droite */
     justify-content: center;
@@ -160,7 +160,7 @@ body {
 
 /* Tablet (601px – 1024px) */
 @media (min-width: 601px) and (max-width: 1024px) {
-  body {
+  .container {
     display: flex;
     flex-direction: column; /* logo au-dessus du login */
     justify-content: center;
@@ -181,7 +181,7 @@ body {
 
 /* Mobile (< 601px) */
 @media (max-width: 600px) {
-  body {
+  .container {
     display: flex;
     flex-direction: column; /* logo au-dessus du login */
     justify-content: center;

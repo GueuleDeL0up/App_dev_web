@@ -15,13 +15,15 @@ $base_dir = __DIR__ . "/../../";  // For PHP includes
 
 <body>
 
-    <!-- Partie logo -->
-    <div class="logo-container">
-        <img src="../../public/assets/images/KeepMyPet_Logo.png" alt="Logo KeepMyPet" class="logo">
-    </div>
+    <div class=container>
+        <!-- Partie logo -->
+        <div class="logo-container">
+            <img src="../../public/assets/images/KeepMyPet_Logo.png" alt="Logo KeepMyPet" class="logo">
+        </div>
 
-    <div class="login-container">
-        <?php include 'Components/SignUp/sign_up.php'; ?>
+        <div class="login-container">
+            <?php include 'Components/SignUp/sign_up.php'; ?>
+        </div>
     </div>
 
     <!-- Formes du fond -->
