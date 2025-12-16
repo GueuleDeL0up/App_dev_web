@@ -37,8 +37,6 @@ $base_dir = __DIR__ . "/../../";  // For PHP includes
     <div class="shape circle" id="c6"></div>
     <div class="shape circle" id="c7"></div>
     <div class="shape circle" id="c8"></div>
-    <!--div class="shape circle" id="c9"></div>
-        <div class="shape circle" id="c10"></div-->
 
     <!-- Triangles -->
     <div class="shape triangle" id="t1"></div>
@@ -48,9 +46,6 @@ $base_dir = __DIR__ . "/../../";  // For PHP includes
     <div class="shape triangle" id="t5"></div>
     <div class="shape triangle" id="t6"></div>
     <div class="shape triangle" id="t7"></div>
-    <!--div class="shape triangle" id="t8"></div>
-        <div class="shape triangle" id="t9"></div>
-        <div class="shape triangle" id="t10"></div-->
   </div>
 
 </body>
