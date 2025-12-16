@@ -32,6 +32,16 @@ header .nav-bar a {
   color: #1e4b60;
 }
 
+header .nav-bar #myLinks {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+header .nav-bar #myLinks.active {
+  display: flex !important;
+}
+
 /* lang */
 header .lang {
   display: flex;
@@ -57,36 +67,81 @@ header .lang img {
 /* Mobile (< 601px) */
 @media (max-width: 600px) {
   header {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "nav logo lang";
+    display: flex;
     align-items: center;
     padding: 10px 10px;
   }
 
   header .logo-container {
-    grid-area: logo;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
-  header .nav-bar {
-    grid-area: nav;
+  header .nav-bar #myLinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #a8dcd5;
+    padding: 10px;
+    border-radius: 0 0 40px 40px;
+    gap: 10px;
+  }
+
+  header .nav-bar #myLinks p {
     display: none;
   }
 
+  header .nav-bar {
+    position: relative;
+  }
+
   header .lang {
-    grid-area: lang;
+    position: absolute;
+    right: 10px;
   }
 }
 
-/* Tablet (601px - 1024px) */
-@media (min-width: 601px) and (max-width: 1024px) {
+/* Tablet (601px - 1024px)  */
+@media (max-width: 1024px) {
   header {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     padding: 10px 10px;
+  }
+
+  header .logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  header .nav-bar #myLinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #a8dcd5;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  header .nav-bar #myLinks p {
+    display: none;
+  }
+
+  header .nav-bar {
+    position: relative;
+  }
+
+  header .lang {
+    position: absolute;
+    right: 10px;
   }
 }
 
@@ -98,5 +153,9 @@ header .lang img {
     justify-content: space-between;
     align-items: center;
     padding: 10px 10px;
+  }
+
+  header .nav-bar .icon {
+    display: none;
   }
 }

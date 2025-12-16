@@ -1,7 +1,7 @@
 <?php
 // Define the base
 $base_url = "/App_dev_web/";  // For HTML links
-$base_dir = __DIR__ . "/../../";  // For PHP includes
+$base_dir = __DIR__ . "/../../../";  // For PHP includes
 ?>
 
 <!DOCTYPE html>
@@ -9,8 +9,8 @@ $base_dir = __DIR__ . "/../../";  // For PHP includes
 
 <head>
   <meta charset="UTF-8">
-  <title>KeepMyPet - Header</title>
   <link rel="stylesheet" href="<?php echo $base_url; ?>/public/assets/css/header.css">
+  <script type="text/javascript" src="<?php echo $base_url; ?>/public/assets/js/header.js"></script>
 </head>
 
 <body>
@@ -20,13 +20,18 @@ $base_dir = __DIR__ . "/../../";  // For PHP includes
     </div>
 
     <nav class="nav-bar">
-      <a href="<?php echo $base_url; ?>/app/Views/Visiteurs/home.php">Accueil</a>
-      <p>|</p>
-      <a href="#">Annonces</a>
-      <p>|</p>
-      <a href="#">Contact</a>
-      <p>|</p>
-      <a href="<?php echo $base_url; ?>/app/Views/log_in.php">Connexion</a>
+      <div id="myLinks">
+        <a href="<?php echo $base_url; ?>/app/Views/home.php">Accueil</a>
+        <p>|</p>
+        <a href="<?php echo $base_url; ?>/app/Views/advertisements.php">Annonces</a>
+        <p>|</p>
+        <a href="<?php echo $base_url; ?>/app/Views/contact.php">Contact</a>
+        <p>|</p>
+        <a href="<?php echo $base_url; ?>/app/Views/log_in.php">Connexion</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <p class="fa fa-bars">≡</p>
+      </a>
     </nav>
 
     <div class="lang">

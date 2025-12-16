@@ -9,7 +9,6 @@ $base_dir = __DIR__ . "/../../";  // For PHP includes
 
 <head>
   <meta charset="UTF-8">
-  <title>KeepMyPet - Footer</title>
   <link rel="stylesheet" href="<?php echo $base_url; ?>/public/assets/css/footer.css">
 </head>
 
