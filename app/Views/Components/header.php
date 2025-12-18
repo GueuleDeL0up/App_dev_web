@@ -19,7 +19,8 @@ $base_dir = __DIR__ . "/../../../";  // For PHP includes
       <img src="<?php echo $base_url; ?>/public/assets/images/KeepMyPet_Logo.png" alt="Logo KeepMyPet">
     </div>
 
-    <nav class="nav-bar">
+    <nav class="nav-bar" onclick="myFunction()">
+      <a class="button-menu">≡</a>
       <div id="myLinks">
         <a href="<?php echo $base_url; ?>/app/Views/home.php">Accueil</a>
         <p>|</p>
@@ -29,9 +30,6 @@ $base_dir = __DIR__ . "/../../../";  // For PHP includes
         <p>|</p>
         <a href="<?php echo $base_url; ?>/app/Views/log_in.php">Connexion</a>
       </div>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <p class="fa fa-bars">≡</p>
-      </a>
     </nav>
 
     <div class="lang">
@@ -43,10 +41,3 @@ $base_dir = __DIR__ . "/../../../";  // For PHP includes
 </body>
 
 </html>
-
-<style>
-  /* Debugging Borders */
-  * {
-    border: 1px solid red;
-  }
-</style>

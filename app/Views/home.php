@@ -20,21 +20,24 @@ include $base_dir . "/app/Views/Components/header.php";
   <!-- INTRO -->
   <div class="intro">
     <div class="image">
-      <img src="<?php echo $base_url; ?>/public/assets/images/animaux.png" alt="Animaux">
+      <img src="<?php echo $base_url; ?>/public/assets/images/animals.png" alt="Animaux">
     </div>
 
-    <div class="text">
-      KeepMyPet met en relation les propriétaires d'animaux avec des gardiens
-      et promeneurs de confiance. Que ce soit pour une balade quotidienne, une
-      promenade ou une garde à domicile, nous veillons au bien-être de votre
-      compagnon pendant votre absence. Profitez l'esprit tranquille, votre animal
-      est entre de bonnes mains.
+    <div class="intro-text">
+      <h2>Qui sommes-nous ?</h2>
+      <p>
+        KeepMyPet met en relation les propriétaires d'animaux avec des gardiens
+        et promeneurs de confiance. Que ce soit pour une balade quotidienne, une
+        promenade ou une garde à domicile, nous veillons au bien-être de votre
+        compagnon pendant votre absence. Profitez l'esprit tranquille, votre animal
+        est entre de bonnes mains.
+      </p>
     </div>
   </div>
 
   <!-- COMMENT ÇA MARCHE -->
   <div class="how-it-works">
-    <div class="text">
+    <div class="how-it-works-text">
       <h2>Comment ça marche ?</h2>
       <ul>
         <li>Inscrivez votre animal avec ses besoins et habitudes.</li>
@@ -56,10 +59,3 @@ include $base_dir . "/app/Views/Components/header.php";
 // FOOTER
 include $base_dir . '/app/Views/Components/footer.php';
 ?>
-
-<style>
-  /* Debugging Borders */
-  * {
-    border: 1px solid red;
-  }
-</style>
