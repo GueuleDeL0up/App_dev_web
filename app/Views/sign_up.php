@@ -1,64 +1,58 @@
-<?php require_once '/app/Views/header.php'; ?>
+<?php
+// Define the base
+$base_url = "/keep-my-pet/";  // For HTML links
+$base_dir = __DIR__ . "/../../";  // For PHP includes
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
   <meta charset="UTF-8">
-  <title>KeepMyPet - Sign Up</title>
-  <link rel="stylesheet" href="assets/css/main.css">
+  <title>KeepMyPet - S'inscrire</title>
+  <!-- link rel="stylesheet" href="../../public/assets/css/main.css"-->
+  <link rel="stylesheet" href="<?php echo $base_url; ?>/public/assets/css/sign_up.css">
 </head>
 
-<body id="inscription">
+<body>
 
-  <!-- Formes de fond -->
-  <div class="shape circle" style="top: 120px; left: 150px;"></div>
-  <div class="shape circle" style="top: 300px; left: 100px;"></div>
-  <div class="shape circle" style="bottom: 120px; left: 200px;"></div>
-  <div class="shape triangle" style="top: 250px; left: 350px;"></div>
-  <div class="shape triangle" style="bottom: 200px; left: 100px;"></div>
-  <div class="shape circle" style="top: 80px; right: 350px;"></div>
-  <div class="shape triangle" style="top: 200px; right: 220px;"></div>
-  <div class="shape circle" style="bottom: 140px; right: 300px;"></div>
-
-  <div class="container">
-
-    <!-- Logo gauche -->
-    <div class="left">
-      <img src="assets/KeepMyPet_Logo.png" alt="Logo KeepMyPet">
+  <div class=container>
+    <!-- Partie logo -->
+    <div class="logo-container">
+      <img src="<?php echo $base_url; ?>/public/assets/images/KeepMyPet_Logo.png" alt="Logo KeepMyPet" class="logo">
     </div>
 
-    <!-- Formulaire -->
-    <div class="right">
-
-      <label>MAIL</label>
-      <input type="text" class="input">
-
-      <div class="row">
-        <div style="flex:1">
-          <label>NOM</label>
-          <input type="text" class="input">
-        </div>
-
-        <div style="flex:1">
-          <label>PRÉNOM</label>
-          <input type="text" class="input">
-        </div>
-      </div>
-
-      <label>MOT DE PASSE</label>
-      <input type="password" class="input">
-
-      <label>CONFIRMER LE MOT DE PASSE</label>
-      <input type="password" class="input">
-
-      <button class="btn">S'inscrire</button>
-
-      <div class="links">
-        <a href="Connexion.html">Se connecter</a>
-      </div>
+    <div class="login-container">
+      <?php include $base_dir . '/app/Views/Components/sign_up.php'; ?>
     </div>
   </div>
 
+  <!-- Formes du fond -->
+  <div class="shapes-container">
+    <!-- Ronds -->
+    <div class="shape circle" id="c1"></div>
+    <div class="shape circle" id="c2"></div>
+    <div class="shape circle" id="c3"></div>
+    <div class="shape circle" id="c4"></div>
+    <div class="shape circle" id="c5"></div>
+    <div class="shape circle" id="c6"></div>
+    <div class="shape circle" id="c7"></div>
+    <div class="shape circle" id="c8"></div>
+
+    <!-- Triangles -->
+    <div class="shape triangle" id="t1"></div>
+    <div class="shape triangle" id="t2"></div>
+    <div class="shape triangle" id="t3"></div>
+    <div class="shape triangle" id="t4"></div>
+    <div class="shape triangle" id="t5"></div>
+    <div class="shape triangle" id="t6"></div>
+    <div class="shape triangle" id="t7"></div>
+  </div>
 </body>
 
-</html><?php require_once '/app/Views/footer.php'; ?>
+</html>
+
+<?php
+// FOOTER
+include $base_dir . '/app/Views/Components/footer.php';
+?>

@@ -1,15 +1,15 @@
 <?php
 // Define the base
-$base_url = "/App_dev_web/";  // For HTML links
+$base_url = "/keep-my-pet/";  // For HTML links
 $base_dir = __DIR__ . "/../../";  // For PHP includes
 ?>
-<!DOCTYPE html
-  <html lang="fr">
+
+<!DOCTYPE html>
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
-  <title>KeepMyPet - Login</title>
-  <!-- link rel="stylesheet" href="../../public/assets/css/main.css"-->
+  <title>KeepMyPet - Mot de passe oublié</title>
   <link rel="stylesheet" href="<?php echo $base_url; ?>/public/assets/css/forgotten_password.css">
 </head>
 
@@ -18,11 +18,11 @@ $base_dir = __DIR__ . "/../../";  // For PHP includes
   <div class=container>
     <!-- Partie logo -->
     <div class="logo-container">
-      <img src="../../public/assets/images/KeepMyPet_Logo.png" alt="Logo KeepMyPet" class="logo">
+      <img src="<?php echo $base_url; ?>/public/assets/images/KeepMyPet_Logo.png" alt="Logo KeepMyPet" class="logo">
     </div>
 
     <div class="login-container">
-      <?php include 'Components/SignUp/sign_up.php'; ?>
+      <?php include $base_dir . '/app/Views/Components/forgotten_password.php'; ?>
     </div>
   </div>
 
@@ -54,5 +54,5 @@ $base_dir = __DIR__ . "/../../";  // For PHP includes
 
 <?php
 // FOOTER
-include $base_dir . '/app/Views/footer.php';
+include $base_dir . '/app/Views/Components/footer.php';
 ?>

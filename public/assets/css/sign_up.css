@@ -1,92 +1,196 @@
-/* Centrage général */
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center; /* Centre horizontal */
-  align-items: center; /* Centre vertical */
-  background: #f4f4f4;
-  font-family: Arial, sans-serif;
+/* Base pour toutes les formes */
+.shape {
+  position: absolute; /* permet de les placer librement */
 }
 
-/* Cadre principal */
-.right {
-  width: 450px;
-  background: white;
-  padding: 40px;
-  border: 2px solid black; /* Contour noir */
-  border-radius: 25px;
-  box-sizing: border-box; /* Empêche les débordements */
-}
-
-/* Labels */
-label {
-  display: block;
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-
-/* Champs texte */
-.input {
+.shapes-container {
+  position: absolute; /* reste toujours par rapport à l’écran */
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 100%; /* Empêche tout dépassement */
-  padding: 13px 20px;
-  background: #e3e3e3;
-  border: none;
-  border-radius: 25px;
-  margin-bottom: 22px;
-  font-size: 14px;
-  outline: none;
-  box-sizing: border-box; /* Très important */
+  height: 100%;
+  pointer-events: none; /* pour que les formes ne bloquent pas le clic sur le formulaire */
+  z-index: -1;
 }
 
-/* Ligne contenant NOM et PRÉNOM */
-.row {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px; /* Espace entre les deux champs */
-  width: 100%;
-  box-sizing: border-box;
+/* Cercle */
+.circle {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  background-color: #60bdb6;
 }
 
-/* Colonnes pour nom et prénom */
-.col {
-  width: 100%;
+/* Triangle */
+.triangle {
+  width: 0px;
+  height: 0px;
+  border-left: 2vw solid transparent;
+  border-right: 2vw solid transparent;
+  border-bottom: 4vw solid #58b1c9;
 }
 
-/* Bouton S'inscrire */
-.btn {
-  display: block;
-  margin-left: auto; /* Centre horizontalement */
-  margin-right: auto;
-  margin-top: 25px;
-  padding: 12px 35px;
-  background: #bde6e3;
-  border: none;
-  border-radius: 25px;
-  font-size: 15px;
-  cursor: pointer;
-  transition: 0.2s;
+/* --- RONDS (20) --- */
+#c1 {
+  top: 50%;
+  left: 5%;
+}
+#c2 {
+  top: 3%;
+  left: 30%;
+}
+#c3 {
+  top: 5%;
+  left: 60%;
+}
+#c4 {
+  top: 21%;
+  left: 43%;
+}
+#c5 {
+  top: 15%;
+  left: 4%;
+}
+#c6 {
+  top: 80%;
+  left: 24%;
+}
+#c7 {
+  top: 86%;
+  left: 54%;
+}
+#c8 {
+  top: 43%;
+  left: 48%;
+}
+#c9 {
+  top: 3%;
+  left: 87%;
+}
+#c10 {
+  top: 84%;
+  left: 88%;
 }
 
-.btn:hover {
-  background: #a6d8d4;
+/* --- TRIANGLES (20) --- */
+#t1 {
+  top: 2%;
+  left: 15%;
+}
+#t2 {
+  top: 25%;
+  left: 55%;
+}
+#t3 {
+  top: 27%;
+  left: 11%;
+}
+#t4 {
+  top: 80%;
+  left: 8%;
+}
+#t5 {
+  top: 60%;
+  left: 52%;
+}
+#t6 {
+  top: 78%;
+  left: 40%;
+}
+#t7 {
+  top: 3%;
+  left: 45%;
+}
+#t8 {
+  top: 80%;
+  left: 70%;
+}
+#t9 {
+  top: 12%;
+  left: 75%;
+}
+#t10 {
+  top: 3%;
+  left: 45%;
 }
 
-/* Liens en bas */
-.links {
-  text-align: center;
-  margin-top: 25px;
+/* ================= RESPONSIVE ================= */
+
+/* Desktop (> 1024px) */
+@media (min-width: 1025px) {
+  .container {
+    display: flex;
+    flex-direction: row; /* logo à gauche, login à droite */
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  .logo-container {
+    display: flex;
+    justify-content: space-around; /* centre le logo dans son bloc */
+  }
+  .logo-container img {
+    width: 75%;
+  }
+  .login-container {
+    display: flex;
+    margin-left: 50px; /* espace entre logo et login */
+  }
+  .shapes-container {
+    display: block; /* formes visibles */
+  }
 }
 
-.links a {
-  color: #0a67d1;
-  text-decoration: none;
-  font-size: 14px;
+/* Tablet (601px – 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction: column; /* logo au-dessus du login */
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  .logo-container {
+    display: flex;
+    justify-content: space-around; /* centre le logo dans son bloc */
+  }
+  .logo-container img {
+    width: 50%;
+  }
+  .login-container {
+    display: flex;
+    margin-top: 20px;
+  }
+  .shapes-container {
+    display: none;
+  }
 }
 
-.links a:hover {
-  text-decoration: underline;
+/* Mobile (< 601px) */
+@media (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column; /* logo au-dessus du login */
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  .logo-container {
+    display: flex;
+    justify-content: space-around; /* centre le logo dans son bloc */
+  }
+  .logo-container img {
+    width: 45%;
+  }
+  .login-container {
+    display: flex;
+    margin-top: 15px;
+  }
+  .shapes-container {
+    display: none; /* cache les ronds et triangles pour éviter la superposition */
+  }
 }
+/* {
+  border: 1px solid red;
+}
+*/

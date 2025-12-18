@@ -1,16 +1,15 @@
 <?php
 // Define the base
-$base_url = "/App_dev_web/";  // For HTML links
+$base_url = "/keep-my-pet/";  // For HTML links
 $base_dir = __DIR__ . "/../../../";  // For PHP includes
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mot de passe oublié</title>
-  <link rel="stylesheet" href= "<?php echo $base_url; ?>/public/assets/css/forgotten_password.css">
+  <link rel="stylesheet" href="<?php echo $base_url; ?>/public/assets/css/Components/forgotten_password.css">
 </head>
 
 <body>
@@ -31,7 +30,7 @@ $base_dir = __DIR__ . "/../../../";  // For PHP includes
       <p>Un email de réinitialisation a été envoyé.</p>
 
       <div class="links">
-        <a href="../../../app/Views/connexion.php">Se connecter</a>
+        <a href="<?php echo $base_url; ?>/app/Views/log_in.php">Se connecter</a>
       </div>
     </div>
 
@@ -49,12 +48,5 @@ $base_dir = __DIR__ . "/../../../";  // For PHP includes
   </script>
 
 </body>
+
 </html>
-
-<?php
-
-// FOOTER
-
-include $base_dir . '/app/Views/footer.php';
-
-?>

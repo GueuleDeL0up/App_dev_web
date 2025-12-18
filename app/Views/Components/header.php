@@ -1,6 +1,6 @@
 <?php
 // Define the base
-$base_url = "/App_dev_web/";  // For HTML links
+$base_url = "/keep-my-pet/";  // For HTML links
 $base_dir = __DIR__ . "/../../../";  // For PHP includes
 ?>
 
@@ -9,8 +9,8 @@ $base_dir = __DIR__ . "/../../../";  // For PHP includes
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="<?php echo $base_url; ?>/public/assets/css/header.css">
-  <script type="text/javascript" src="<?php echo $base_url; ?>/public/assets/js/header.js"></script>
+  <link rel="stylesheet" href="<?php echo $base_url; ?>/public/assets/css/Components/header.css">
+  <script type="text/javascript" src="<?php echo $base_url; ?>/public/assets/js/Components/header.js"></script>
 </head>
 
 <body>
