@@ -1,6 +1,6 @@
 <?php
 // Define the base
-$base_url = "http://localhost/App_dev_web/";  // For HTML links
+$base_url = "http://localhost/keep-my-pet/";  // For HTML links
 $base_dir = __DIR__ . "/../../";  // For PHP includes
 ?>
 
