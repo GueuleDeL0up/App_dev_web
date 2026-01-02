@@ -1,43 +1,24 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  padding: 10px 10px;
-}
-
-.logo-container {
-  display: flex;
-  justify-content: space-around; /* centre le logo dans son bloc */
-}
-
-.logo-container img {
-  width: 70%;
-}
-
-.login-container {
-  display: flex;
-}
-
+/* ================= FORMES DÉCORATIVES ================= */
 /* Base pour toutes les formes */
 .shape {
   position: absolute; /* permet de les placer librement */
+  width: 4vw;
 }
 
 .shapes-container {
   position: absolute; /* reste toujours par rapport à l’écran */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   pointer-events: none; /* pour que les formes ne bloquent pas le clic sur le formulaire */
-  z-index: -1;
+  z-index: -1; 
+  justify-content: space-around;
+  overflow: hidden;
+  height: calc(100vh - 110px);
 }
 
 /* Cercle */
 .circle {
-  width: 5vw;
-  height: 5vw;
+  width: 4vw;
+  height: 4vw;
   border-radius: 50%;
   background-color: #60bdb6;
 }
@@ -46,9 +27,9 @@ body {
 .triangle {
   width: 0px;
   height: 0px;
-  border-left: 2.3vw solid transparent;
-  border-right: 2.3vw solid transparent;
-  border-bottom: 5vw solid #58b1c9;
+  border-left: 2vw solid transparent;
+  border-right: 2vw solid transparent;
+  border-bottom: 4vw solid #58b1c9;
 }
 
 /* --- RONDS (20) --- */
@@ -127,14 +108,97 @@ body {
   left: 70%;
 }
 #t9 {
-  top: 12%;
-  left: 75%;
+  top: 8%;
+  left: 74%;
 }
 #t10 {
   top: 3%;
   left: 45%;
 }
 
+/* ================= CONTAINER PRINCIPAL ================= */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+body {
+  background-color: #F4F4F4; /* couleur gris clair */
+}
+.container {
+  height: calc(100vh - 120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;          /* espace entre logo et login */
+  /* prend toute la hauteur de l’écran */
+  overflow-x: hidden; /* enlève le scroll horizontal */
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-container img {
+  width: 50%;
+
+}
+
+.login-container {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 4vw;
+}
+.forgotten-password {
+  width: 100%;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Desktop (> 1024px) */
+@media (min-width: 1025px) {
+  .container {
+    flex-direction: row;
+    gap : 110px
+  }
+  .logo-container img {
+    width: 50%;
+  }
+}
+
+/* Tablet (601px – 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .logo-container {
+    margin-top: 100px;
+  }
+  .logo-container img {
+    width: 50%; 
+  }
+
+  .login-container {
+    width: 50%;
+ }
+  .shapes-container {
+    display: none;
+  }
+}
+
+/* Mobile (< 601px) */
+@media (max-width: 600px) {
+  .logo-container img {
+    width: 50%;
+  }
+
+  .shapes-container {
+    display: none;
+  }
+}
 
 /* {
   border: 1px solid red;
