@@ -3,13 +3,13 @@
 $base_url = "/keep-my-pet/";  // For HTML links
 $base_dir = __DIR__ . "/../../";  // For PHP includes
 ?>
-
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html
+  <html lang="fr">
 
 <head>
   <meta charset="UTF-8">
-  <title>KeepMyPet - Mot de passe oublié</title>
+  <title>KeepMyPet - forgotten_password</title>
+  <!-- link rel="stylesheet" href="../../public/assets/css/main.css"-->
   <link rel="stylesheet" href="<?php echo $base_url; ?>/public/assets/css/forgotten_password.css">
 </head>
 
@@ -18,7 +18,7 @@ $base_dir = __DIR__ . "/../../";  // For PHP includes
   <div class=container>
     <!-- Partie logo -->
     <div class="logo-container">
-      <img src="<?php echo $base_url; ?>/public/assets/images/KeepMyPet_Logo.png" alt="Logo KeepMyPet" class="logo">
+      <img src="../../public/assets/images/KeepMyPet_Logo.png" alt="Logo KeepMyPet" class="logo">
     </div>
 
     <div class="login-container">
@@ -46,13 +46,17 @@ $base_dir = __DIR__ . "/../../";  // For PHP includes
     <div class="shape triangle" id="t5"></div>
     <div class="shape triangle" id="t6"></div>
     <div class="shape triangle" id="t7"></div>
+    <div class="shape triangle" id="t8"></div>
+    <div class="shape triangle" id="t9"></div>
+    <div class="shape triangle" id="t10"></div>
   </div>
 
 </body>
 
 </html>
-
-<?php
-// FOOTER
-include $base_dir . '/app/Views/Components/footer.php';
-?>
+<div class="forgotten-password">
+  <?php
+  // FOOTER
+  include $base_dir . '/app/Views/Components/footer.php';
+  ?>
+</div>
