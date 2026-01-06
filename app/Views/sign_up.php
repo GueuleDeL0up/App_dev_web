@@ -9,7 +9,7 @@ $base_dir = __DIR__ . "/../../";  // For PHP includes
 <head>
   <meta charset="UTF-8">
   <title>KeepMyPet - Login</title>
-  <!-- link rel="stylesheet" href="../../public/assets/css/main.css"-->
+  <link rel="icon" type="image/png" href="<?php echo $base_url; ?>/public/assets/images/KeepMyPet_Logo.png" />
   <link rel="stylesheet" href="<?php echo $base_url; ?>/public/assets/css/sign_up.css">
 </head>
 
