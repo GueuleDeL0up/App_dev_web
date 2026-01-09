@@ -148,6 +148,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-right: 4vw;
+  height: 80%;
 }
 
 .footer-container {

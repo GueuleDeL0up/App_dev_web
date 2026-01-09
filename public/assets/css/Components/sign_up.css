@@ -1,60 +1,69 @@
-/* Cadre principal */
+/* Centrage général */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+/* Cadre formulaire */
 .right {
-  width: 450px;
+  width: 100%;
   background: white;
-  padding: 40px;
-  border: 2px solid black; /* Contour noir */
-  border-radius: 25px;
-  box-sizing: border-box; /* Empêche les débordements */
+  padding: 2rem;
+  border: 0.1rem solid black;
+  border-radius: 1.2rem;
+  box-sizing: border-box;
 }
 
 /* Labels */
 label {
   display: block;
-  font-size: 14px;
+  font-size: 0.85rem;
   font-weight: 600;
-  margin-bottom: 6px;
+  margin-bottom: 0.3rem;
 }
 
 /* Champs texte */
 .input {
   width: 100%;
-  max-width: 100%; /* Empêche tout dépassement */
-  padding: 13px 20px;
+  padding: 0.7rem 1rem;
   background: #e3e3e3;
   border: none;
-  border-radius: 25px;
-  margin-bottom: 22px;
-  font-size: 14px;
+  border-radius: 1.2rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
   outline: none;
-  box-sizing: border-box; /* Très important */
-}
-
-/* Ligne contenant NOM et PRÉNOM */
-.row {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px; /* Espace entre les deux champs */
-  width: 100%;
   box-sizing: border-box;
 }
 
-/* Colonnes pour nom et prénom */
-.col {
+/* Ligne flex */
+.row {
+  display: flex;
+  gap: 0.8rem;
   width: 100%;
+  flex-wrap: wrap; /* permet de passer sur 2 lignes sur mobile si besoin */
 }
 
-/* Bouton S'inscrire */
+/* Colonnes */
+.col {
+  flex: 1;
+}
+
+/* Bouton */
 .btn {
   display: block;
-  margin-left: auto; /* Centre horizontalement */
-  margin-right: auto;
-  margin-top: 25px;
-  padding: 12px 35px;
+  width: 100%;
+  margin: 1rem 0 0;
+  padding: 0.7rem;
   background: #bde6e3;
   border: none;
-  border-radius: 25px;
-  font-size: 15px;
+  border-radius: 1.2rem;
+  font-size: 0.95rem;
   cursor: pointer;
   transition: 0.2s;
 }
@@ -63,18 +72,25 @@ label {
   background: #a6d8d4;
 }
 
-/* Liens en bas */
+/* Liens */
 .links {
   text-align: center;
-  margin-top: 25px;
+  margin-top: 1rem;
 }
 
 .links a {
   color: #0a67d1;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.8rem;
 }
 
 .links a:hover {
   text-decoration: underline;
+}
+
+/* Adaptation mobile */
+@media screen and (max-width: 480px) {
+  .row {
+    flex-direction: column; /* empile les colonnes */
+  }
 }

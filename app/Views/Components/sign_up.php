@@ -9,11 +9,12 @@ $base_dir = __DIR__ . "/../../../";  // For PHP includes
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In</title>
   <link rel="stylesheet" href="<?php echo $base_url; ?>/public/assets/css/Components/sign_up.css">
 </head>
 
 <body>
-
   <div class="right">
     <label>MAIL</label>
     <input type="text" class="input">
@@ -30,6 +31,26 @@ $base_dir = __DIR__ . "/../../../";  // For PHP includes
       </div>
     </div>
 
+    <label>TÉLÉPHONE</label>
+    <input type="text" class="input">
+
+    <!-- Adresse -->
+    <label>ADRESSE</label>
+    <input type="text" class="input">
+
+    <div class="row">
+      <div class="col">
+        <label>VILLE</label>
+        <input type="text" class="input">
+      </div>
+
+      <div class="col">
+        <label>CODE POSTAL</label>
+        <input type="text" class="input">
+      </div>
+    </div>
+
+
 
     <label>MOT DE PASSE</label>
     <input type="text" class="input">
@@ -37,11 +58,11 @@ $base_dir = __DIR__ . "/../../../";  // For PHP includes
     <label>CONFIRMER LE MOT DE PASSE</label>
     <input type="text" class="input">
 
-    <a href="<?php echo $base_url; ?>/app/Views/home.php"><button class="btn">S'INSCRIRE</button></a>
+    <a href="#"><button class="btn">S'INSCRIRE</button></a>
 
 
     <div class="links">
-      <a href="<?php echo $base_url; ?>/app/Views/log_in.php">SE CONNECTER</a>
+      <a href="../../connexion.php">SE CONNECTER</a>
     </div>
   </div>
 </body>
