@@ -1,6 +1,6 @@
 <?php
 // Define the base
-$base_url = "/App_dev_web/";  // For HTML links
+$base_url = "/keep-my-pet/";  // For HTML links
 $base_dir = __DIR__ . "/../../../../";  // For PHP includes
 ?>
 
@@ -31,6 +31,26 @@ $base_dir = __DIR__ . "/../../../../";  // For PHP includes
             <input type="text" class="input">
         </div>
     </div>
+
+    <label>TÉLÉPHONE</label>
+    <input type="text" class="input">
+
+        <!-- Adresse -->
+    <label>ADRESSE</label>
+    <input type="text" class="input">
+
+    <div class="row">
+        <div class="col">
+            <label>VILLE</label>
+            <input type="text" class="input">
+        </div>
+
+        <div class="col">
+            <label>CODE POSTAL</label>
+            <input type="text" class="input">
+        </div>
+    </div>
+
 
 
     <label>MOT DE PASSE</label>
