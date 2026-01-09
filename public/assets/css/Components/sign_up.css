@@ -8,21 +8,22 @@ body {
   align-items: center;
   background: #f4f4f4;
   font-family: Arial, sans-serif;
+  height: calc(100vh - 150px);
 }
 
 /* Cadre formulaire */
 .right {
   width: 100%;
-  background: white;
+  max-width: 500px;
   padding: 2rem;
-  border: 0.1rem solid black;
+  box-sizing: border-box; /* padding inclus dans la largeur */
+  background: white;
+  border: 1px solid black;
   border-radius: 1.2rem;
-  box-sizing: border-box;
 }
 
 /* Labels */
 label {
-  display: block;
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 0.3rem;
@@ -31,14 +32,12 @@ label {
 /* Champs texte */
 .input {
   width: 100%;
-  padding: 0.7rem 1rem;
+  box-sizing: border-box;
+  border-radius: 1.2rem;
+  padding: 0.3rem 1rem;
+  margin-bottom: 3%;
   background: #e3e3e3;
   border: none;
-  border-radius: 1.2rem;
-  margin-bottom: 1rem;
-  font-size: 0.85rem;
-  outline: none;
-  box-sizing: border-box;
 }
 
 /* Ligne flex */

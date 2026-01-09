@@ -49,9 +49,6 @@ $base_dir = __DIR__ . "/../../../";  // For PHP includes
         <input type="text" class="input">
       </div>
     </div>
-
-
-
     <label>MOT DE PASSE</label>
     <input type="text" class="input">
 
@@ -59,7 +56,6 @@ $base_dir = __DIR__ . "/../../../";  // For PHP includes
     <input type="text" class="input">
 
     <a href="#"><button class="btn">S'INSCRIRE</button></a>
-
 
     <div class="links">
       <a href="../../connexion.php">SE CONNECTER</a>
