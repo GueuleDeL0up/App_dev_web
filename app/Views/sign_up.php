@@ -23,7 +23,15 @@ $base_dir = __DIR__ . "/../../";  // For PHP includes
     </div>
 
     <div class="login-container">
-      <?php include $base_dir . '/app/Views/Components/sign_up.php'; ?>
+      <?php
+      // Backend handling for signup (controller class)
+      include $base_dir . 'app/Models/connection_db.php';
+      include $base_dir . 'app/Controller/SignUpController.php';
+
+      $errors = SignUpController::handle($db, $base_dir, $base_url);
+
+      // Render component
+      include $base_dir . '/app/Views/Components/sign_up.php'; ?>
     </div>
   </div>
 

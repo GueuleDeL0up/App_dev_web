@@ -12,7 +12,7 @@ include $base_dir . "/app/Views/Components/header.php";
 
 <head>
   <meta charset="UTF-8">
-  <title>KeepMyPet - FAQ</title>
+  <title>FAQ</title>
   <link rel="stylesheet" href="<?php echo $base_url; ?>/public/assets/css/faq.css">
 </head>
 
@@ -53,11 +53,7 @@ include $base_dir . "/app/Views/Components/header.php";
     </div>
     </div>
   </section>
+  <?php include $base_dir . '/app/Views/Components/footer.php'; ?>
 </body>
 
 </html>
-
-<?php
-// FOOTER
-include $base_dir . '/app/Views/Components/footer.php';
-?>

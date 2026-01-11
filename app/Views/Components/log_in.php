@@ -15,13 +15,24 @@ $base_dir = __DIR__ . "/../../../";  // For PHP includes
 <body>
 
   <div class="right">
-    <label>IDENTIFIANT</label>
-    <input type="text" class="input">
 
-    <label>MOT DE PASSE</label>
-    <input type="password" class="input">
+    <?php if (!empty($errors) && is_array($errors)) : ?>
+      <div class="errors">
+        <?php foreach ($errors as $err) : ?>
+          <p class="error"><?php echo htmlspecialchars($err); ?></p>
+        <?php endforeach; ?>
+      </div>
+    <?php endif; ?>
 
-    <a href="<?php echo $base_url; ?>/app/Views/home.php"><button class="btn">Se connecter</button></a>
+    <form method="POST" action="">
+      <label>EMAIL</label>
+      <input type="email" name="email" class="input" value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>" required>
+
+      <label>MOT DE PASSE</label>
+      <input type="password" name="password" class="input" required>
+
+      <button type="submit" class="btn">Se connecter</button>
+    </form>
 
     <div class="links">
       <a href="<?php echo $base_url; ?>/app/Views/forgotten_password.php">Mot de passe oublié</a> -

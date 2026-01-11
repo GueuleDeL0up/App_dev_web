@@ -12,7 +12,7 @@ include $base_dir . "/app/Views/Components/header.php";
 
 <head>
   <meta charset="UTF-8">
-  <title>KeepMyPet - À propos de G2Cidées</title>
+  <title>À propos</title>
   <link rel="stylesheet" href="<?php echo $base_url; ?>/public/assets/css/about_g2cidees.css">
 </head>
 

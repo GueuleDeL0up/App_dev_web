@@ -12,7 +12,7 @@ include $base_dir . "/app/Views/Components/header.php";
 
 <head>
   <meta charset="UTF-8">
-  <title>KeepMyPet - Contact</title>
+  <title>Contact</title>
   <link rel="stylesheet" href="<?php echo $base_url; ?>/public/assets/css/contact.css">
 </head>
 
