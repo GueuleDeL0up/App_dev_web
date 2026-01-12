@@ -1,3 +1,10 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 /* ================= FORMES DÉCORATIVES ================= */
 /* Base pour toutes les formes */
 .shape {
@@ -143,9 +150,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5vw; /* espace entre logo et login */
+  gap: 3vw; /* espace entre logo et login */
   /* prend toute la hauteur de l’écran */
   overflow-x: hidden; /* enlève le scroll horizontal */
+  width: 100%;
 }
 
 .logo-container {
@@ -154,17 +162,18 @@ body {
 }
 
 .logo-container img {
-  width: 50%;
+  width: clamp(18rem, 35vw, 40rem);
 }
 
 .login-container {
   display: flex;
-  justify-content: space-between;
-  margin-right: 4vw;
+  flex-direction: column; /* plus stable pour mobile */
+  margin-right: 0%;
 }
 
 .footer-container {
   width: 100%; /* prend toute la largeur du parent (body) */
+  flex-shrink: 0;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -173,10 +182,11 @@ body {
 @media (min-width: 1025px) {
   .container {
     flex-direction: row;
-    gap: 110px;
+    gap: 450px;
   }
   .logo-container img {
-    width: 50%;
+    width: 500px;
+    justify-content: space-around;
   }
 }
 
@@ -184,18 +194,21 @@ body {
 @media (max-width: 1024px) {
   .container {
     flex-direction: column;
-    gap: 30px;
+    overflow-x: visible;
+    gap: 0%;
   }
   .logo-container {
     margin-top: 100px;
   }
   .logo-container img {
-    width: 50%;
+    width: 53%;
   }
 
   .login-container {
-    width: 50%;
+    max-width: 100%;
+    margin-bottom: 00%;
   }
+
   .shapes-container {
     display: none;
   }
@@ -203,14 +216,21 @@ body {
 
 /* Mobile (< 601px) */
 @media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    overflow: visible;
+  }
   .logo-container img {
     width: 50%;
   }
-
+  .login-container {
+    display: flex;
+    overflow: hidden;
+  }
   .shapes-container {
     display: none;
   }
-}
+
 
 /* {
   border: 1px solid red;
