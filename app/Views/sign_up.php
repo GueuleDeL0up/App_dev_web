@@ -1,6 +1,6 @@
 <?php
 // Define the base
-$base_url = "http://localhost/keep-my-pet/";  // For HTML links
+$base_url = "/keep-my-pet/";  // For HTML links
 $base_dir = __DIR__ . "/../../";  // For PHP includes
 ?>
 <!DOCTYPE html>
@@ -8,7 +8,7 @@ $base_dir = __DIR__ . "/../../";  // For PHP includes
 
 <head>
   <meta charset="UTF-8">
-  <title>KeepMyPet - Login</title>
+  <title>KeepMyPet - Sign Up</title>
   <link rel="icon" type="image/png" href="<?php echo $base_url; ?>/public/assets/images/KeepMyPet_Logo.png" />
   <link rel="stylesheet" href="<?php echo $base_url; ?>/public/assets/css/sign_up.css">
 </head>
