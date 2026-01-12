@@ -20,16 +20,29 @@
   width: 4vw;
   height: 4vw;
   border-radius: 50%;
-  background-color: #60bdb6;
+  background: linear-gradient(0deg, #6cb9ce, #63c2bd);
+}
+
+.circlee {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  background: linear-gradient(0deg, #7aa6bc, #06cac0);
 }
 
 /* Triangle */
 .triangle {
-  width: 0px;
-  height: 0px;
-  border-left: 2vw solid transparent;
-  border-right: 2vw solid transparent;
-  border-bottom: 4vw solid #58b1c9;
+  width: 4vw;
+  height: 4vw;
+  background: linear-gradient(0deg, #63c2bd, #6cb9ce);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.trianglee {
+  width: 4vw;
+  height: 4vw;
+  background: linear-gradient(0deg, #83aabe, #03c9bf);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
 /* --- RONDS (20) --- */
@@ -123,7 +136,6 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column; /* organise le contenu en colonne */
-  background-color: #f4f4f4;
 }
 
 .container {

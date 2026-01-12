@@ -33,19 +33,19 @@ $base_dir = __DIR__ . "/../../";  // For PHP includes
     <div class="shape circle" id="c2"></div>
     <div class="shape circle" id="c3"></div>
     <div class="shape circle" id="c4"></div>
-    <div class="shape circle" id="c5"></div>
-    <div class="shape circle" id="c6"></div>
-    <div class="shape circle" id="c7"></div>
-    <div class="shape circle" id="c8"></div>
+    <div class="shape circlee" id="c5"></div>
+    <div class="shape circlee" id="c6"></div>
+    <div class="shape circlee" id="c7"></div>
+    <div class="shape circlee" id="c8"></div>
 
     <!-- Triangles -->
     <div class="shape triangle" id="t1"></div>
     <div class="shape triangle" id="t2"></div>
     <div class="shape triangle" id="t3"></div>
     <div class="shape triangle" id="t4"></div>
-    <div class="shape triangle" id="t5"></div>
-    <div class="shape triangle" id="t6"></div>
-    <div class="shape triangle" id="t7"></div>
+    <div class="shape trianglee" id="t5"></div>
+    <div class="shape trianglee" id="t6"></div>
+    <div class="shape trianglee" id="t7"></div>
   </div>
 </body>
 
