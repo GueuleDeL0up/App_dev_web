@@ -54,7 +54,7 @@ $base_dir = __DIR__ . "/../../";  // For PHP includes
 </body>
 
 </html>
-<div class="forgotten-password">
+<div class="footer-container">
   <?php
   // FOOTER
   include $base_dir . '/app/Views/Components/footer.php';
