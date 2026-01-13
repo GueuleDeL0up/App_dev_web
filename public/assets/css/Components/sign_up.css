@@ -1,21 +1,8 @@
-/* Centrage général */
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f4f4f4;
-  font-family: Arial, sans-serif;
-  height: calc(100vh - 150px);
-}
-
 /* Cadre formulaire */
 .right {
-  width: 100%;
-  max-width: 500px;
+  width: 80%;
   padding: 2rem;
+  margin-left: 10%;
   box-sizing: border-box; /* padding inclus dans la largeur */
   border: 1px solid black;
   border-radius: 1.2rem;

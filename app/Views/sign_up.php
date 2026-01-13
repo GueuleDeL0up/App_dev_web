@@ -21,7 +21,7 @@ $base_dir = __DIR__ . "/../../";  // For PHP includes
       <img src="../../public/assets/images/KeepMyPet_Logo.png" alt="Logo KeepMyPet" class="logo">
     </div>
 
-    <div class="login-container">
+    <div class="signup-container">
       <?php include 'Components/sign_up.php'; ?>
     </div>
   </div>

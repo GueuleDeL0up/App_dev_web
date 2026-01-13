@@ -10,6 +10,118 @@
 .shape {
   position: absolute; /* permet de les placer librement */
   width: 4vw;
+  z-index: -1;
+}
+
+/* Animations d'entrée/sortie */
+@keyframes popIn1 {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes popIn2 {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes popIn3 {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes popIn4 {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.25);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#c1 {
+  animation: popIn1 10s ease-in-out infinite;
+}
+#c2 {
+  animation: popIn2 12s ease-in-out infinite;
+}
+#c3 {
+  animation: popIn3 11s ease-in-out infinite 0.3s;
+}
+#c4 {
+  animation: popIn4 13s ease-in-out infinite;
+}
+#c5 {
+  animation: popIn1 11.5s ease-in-out infinite 0.5s;
+}
+#c6 {
+  animation: popIn2 10.5s ease-in-out infinite 0.2s;
+}
+#c7 {
+  animation: popIn3 12.5s ease-in-out infinite 0.4s;
+}
+#c8 {
+  animation: popIn4 11s ease-in-out infinite 0.1s;
+}
+#c9 {
+  animation: popIn1 12s ease-in-out infinite 0.3s;
+}
+#c10 {
+  animation: popIn2 11s ease-in-out infinite 0.6s;
+}
+
+#t1 {
+  animation: popIn2 11.5s ease-in-out infinite 0.2s;
+}
+#t2 {
+  animation: popIn3 10s ease-in-out infinite 0.4s;
+}
+#t3 {
+  animation: popIn1 13s ease-in-out infinite;
+}
+#t4 {
+  animation: popIn4 11s ease-in-out infinite 0.3s;
+}
+#t5 {
+  animation: popIn2 12.5s ease-in-out infinite 0.5s;
+}
+#t6 {
+  animation: popIn1 11s ease-in-out infinite 0.1s;
+}
+#t7 {
+  animation: popIn3 12s ease-in-out infinite 0.2s;
+}
+#t8 {
+  animation: popIn4 10.5s ease-in-out infinite 0.4s;
+}
+#t9 {
+  animation: popIn1 11.5s ease-in-out infinite 0.3s;
+}
+#t10 {
+  animation: popIn2 12s ease-in-out infinite 0.6s;
 }
 
 .shapes-container {
@@ -139,21 +251,25 @@
 /* ================= CONTAINER PRINCIPAL ================= */
 html,
 body {
-  height: 100%;
   margin: 0;
-  display: flex;
-  flex-direction: column; /* organise le contenu en colonne */
+  padding: 0;
+  height: 100%;
 }
-
-.container {
-  height: calc(100vh - 120px);
+body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+.container {
+  flex: 1; /* prend tout l'espace restant entre header (s'il y en a) et footer */
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  gap: 3vw; /* espace entre logo et login */
-  /* prend toute la hauteur de l’écran */
-  overflow-x: hidden; /* enlève le scroll horizontal */
-  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  padding: 0 2rem; /* pour éviter que le contenu touche les bords */
+  gap: 0px;
 }
 
 .logo-container {
@@ -165,50 +281,55 @@ body {
   width: clamp(18rem, 35vw, 40rem);
 }
 
-.login-container {
+.signup-container {
   display: flex;
   flex-direction: column; /* plus stable pour mobile */
-  margin-right: 0%;
+  justify-content: space-around;
 }
-
 .footer-container {
-  width: 100%; /* prend toute la largeur du parent (body) */
+  width: 100%;
   flex-shrink: 0;
 }
 
 /* ================= RESPONSIVE ================= */
 
 /* Desktop (> 1024px) */
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   .container {
     flex-direction: row;
-    gap: 450px;
+    justify-content: space-around;
+    width: 100%;
   }
+
   .logo-container img {
     width: 500px;
-    justify-content: space-around;
+    margin-left: 65%;
+  }
+  .signup-container {
+    flex: 1;
+    max-width: 500px;
+    margin-left: 30%;
   }
 }
 
 /* Tablet (601px – 1024px) */
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .container {
     flex-direction: column;
     overflow-x: visible;
     gap: 0%;
   }
-  .logo-container {
-    margin-top: 100px;
-  }
+
   .logo-container img {
     width: 53%;
   }
-
-  .login-container {
-    max-width: 100%;
-    margin-bottom: 00%;
+  .signup-container {
+    max-width: 80%;
+    margin-bottom: 10%;
+    margin-left: 0%;
+    justify-content: center;
+    height: auto;
   }
-
   .shapes-container {
     display: none;
   }
@@ -223,16 +344,11 @@ body {
   .logo-container img {
     width: 50%;
   }
-  .login-container {
+  .signup-container {
     display: flex;
     overflow: hidden;
   }
   .shapes-container {
     display: none;
   }
-
-
-/* {
-  border: 1px solid red;
 }
-*/
