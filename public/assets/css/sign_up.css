@@ -164,16 +164,15 @@ body {
 .container {
   flex: 1; /* prend tout l'espace restant entre header (s'il y en a) et footer */
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   position: relative;
   padding: 0 2rem; /* pour éviter que le contenu touche les bords */
-  gap: 0px;
 }
 
 .logo-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .logo-container img {
@@ -185,6 +184,7 @@ body {
   flex-direction: column; /* plus stable pour mobile */
   justify-content: space-around;
 }
+
 .footer-container {
   width: 100%;
   flex-shrink: 0;
@@ -196,18 +196,22 @@ body {
 @media (min-width: 1024px) {
   .container {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
   }
 
   .logo-container img {
     width: 500px;
-    margin-left: 65%;
   }
   .signup-container {
     flex: 1;
     max-width: 500px;
-    margin-left: 30%;
+    margin-left: 0%;
+  }
+}
+@media (max-height: 650px) {
+  .shapes-container {
+    display: none;
   }
 }
 
@@ -216,6 +220,7 @@ body {
   .container {
     flex-direction: column;
     overflow-x: visible;
+    margin-bottom: 8%;
     gap: 0%;
   }
 
@@ -224,7 +229,6 @@ body {
   }
   .signup-container {
     max-width: 80%;
-    margin-bottom: 10%;
     margin-left: 0%;
     justify-content: center;
     height: auto;
